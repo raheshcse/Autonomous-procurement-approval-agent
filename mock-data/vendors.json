@@ -59,5 +59,178 @@
         "severity": "high"
       }
     ]
+  },
+  
+  {
+    "vendor_id": "VND-5005",
+    "name": "Vertex Cloud Dynamics",
+    "country": "Canada",
+    "risk_score": 0.31,
+    "financial_health": "stable",
+    "data_access_level": "moderate",
+    "sanctions_watchlist": false,
+    "certifications": ["ISO 27001", "CSA STAR"],
+    "incidents": [
+      {
+        "date": "2026-02-14",
+        "type": "minor_service_outage",
+        "severity": "low"
+      }
+    ]
+  },
+  {
+    "vendor_id": "VND-6006",
+    "name": "Sentinel Threat Analytics",
+    "country": "Australia",
+    "risk_score": 0.22,
+    "financial_health": "strong",
+    "data_access_level": "high",
+    "sanctions_watchlist": false,
+    "certifications": ["SOC 2 Type II", "ISO 27001"],
+    "incidents": []
+  },
+  {
+    "vendor_id": "VND-7007",
+    "name": "Titan Compliance Group",
+    "country": "Germany",
+    "risk_score": 0.71,
+    "financial_health": "watch",
+    "data_access_level": "critical",
+    "sanctions_watchlist": false,
+    "certifications": [],
+    "incidents": [
+      {
+        "date": "2026-01-08",
+        "type": "compliance_audit_failure",
+        "severity": "high"
+      },
+      {
+        "date": "2026-04-02",
+        "type": "delayed_remediation",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "vendor_id": "VND-8008",
+    "name": "Quantum Compute Labs",
+    "country": "Japan",
+    "risk_score": 0.44,
+    "financial_health": "stable",
+    "data_access_level": "critical",
+    "sanctions_watchlist": false,
+    "certifications": ["ISO 27001"],
+    "incidents": [
+      {
+        "date": "2026-03-12",
+        "type": "unexpected_cost_variance",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "vendor_id": "VND-9009",
+    "name": "NovaStream Data Systems",
+    "country": "India",
+    "risk_score": 0.39,
+    "financial_health": "strong",
+    "data_access_level": "high",
+    "sanctions_watchlist": false,
+    "certifications": ["SOC 2 Type II"],
+    "incidents": []
+  },
+  {
+    "vendor_id": "VND-1010",
+    "name": "FlowGrid Automation",
+    "country": "Netherlands",
+    "risk_score": 0.28,
+    "financial_health": "strong",
+    "data_access_level": "moderate",
+    "sanctions_watchlist": false,
+    "certifications": ["ISO 9001", "ISO 27001"],
+    "incidents": []
+  },
+  {
+    "vendor_id": "VND-1111",
+    "name": "Autono Robotics",
+    "country": "South Korea",
+    "risk_score": 0.63,
+    "financial_health": "watch",
+    "data_access_level": "high",
+    "sanctions_watchlist": false,
+    "certifications": ["ISO 9001"],
+    "incidents": [
+      {
+        "date": "2026-02-19",
+        "type": "shipment_delay",
+        "severity": "high"
+      },
+      {
+        "date": "2026-03-30",
+        "type": "safety_noncompliance",
+        "severity": "high"
+      }
+    ]
+  },
+  {
+    "vendor_id": "VND-1212",
+    "name": "LexBridge Legal Advisory",
+    "country": "New Zealand",
+    "risk_score": 0.17,
+    "financial_health": "strong",
+    "data_access_level": "moderate",
+    "sanctions_watchlist": false,
+    "certifications": ["SOC 2 Type II"],
+    "incidents": []
+  },
+  {
+    "vendor_id": "VND-1313",
+    "name": "CoreNet Infrastructure",
+    "country": "United States",
+    "risk_score": 0.57,
+    "financial_health": "stable",
+    "data_access_level": "critical",
+    "sanctions_watchlist": false,
+    "certifications": ["ISO 27001"],
+    "incidents": [
+      {
+        "date": "2026-01-25",
+        "type": "network_instability",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "vendor_id": "VND-1414",
+    "name": "Veritas AI Governance",
+    "country": "Switzerland",
+    "risk_score": 0.26,
+    "financial_health": "strong",
+    "data_access_level": "critical",
+    "sanctions_watchlist": false,
+    "certifications": ["ISO 42001", "SOC 2 Type II"],
+    "incidents": []
+  },
+  {
+    "vendor_id": "VND-1515",
+    "name": "SupplySphere Global",
+    "country": "United Arab Emirates",
+    "risk_score": 0.74,
+    "financial_health": "watch",
+    "data_access_level": "high",
+    "sanctions_watchlist": true,
+    "certifications": [],
+    "incidents": [
+      {
+        "date": "2026-02-07",
+        "type": "sanctions_screening_alert",
+        "severity": "high"
+      },
+      {
+        "date": "2026-04-15",
+        "type": "invoice_manipulation",
+        "severity": "critical"
+      }
+    ]
   }
 ]

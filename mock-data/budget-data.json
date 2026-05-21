@@ -38,5 +38,155 @@
     "pending_approvals": 88000,
     "forecast_spend": 548000,
     "owner": "Security Finance Partner"
+  },
+  {
+    "cost_center": "CC-HR-510",
+    "department": "Human Resources",
+    "fiscal_year": 2026,
+    "allocated": 280000,
+    "spent": 142000,
+    "pending_approvals": 18000,
+    "forecast_spend": 255000,
+    "owner": "HR Business Controller"
+  },
+  {
+    "cost_center": "CC-RND-620",
+    "department": "Research and Development",
+    "fiscal_year": 2026,
+    "allocated": 1250000,
+    "spent": 820000,
+    "pending_approvals": 142000,
+    "forecast_spend": 1345000,
+    "owner": "R&D Finance Director"
+  },
+  {
+    "cost_center": "CC-OPS-710",
+    "department": "Operations",
+    "fiscal_year": 2026,
+    "allocated": 670000,
+    "spent": 390000,
+    "pending_approvals": 54000,
+    "forecast_spend": 648000,
+    "owner": "Operations Finance Lead"
+  },
+  {
+    "cost_center": "CC-LOG-810",
+    "department": "Logistics",
+    "fiscal_year": 2026,
+    "allocated": 540000,
+    "spent": 448000,
+    "pending_approvals": 93000,
+    "forecast_spend": 611000,
+    "owner": "Logistics Budget Manager"
+  },
+  {
+    "cost_center": "CC-CLOUD-910",
+    "department": "Cloud Infrastructure",
+    "fiscal_year": 2026,
+    "allocated": 1450000,
+    "spent": 1090000,
+    "pending_approvals": 186000,
+    "forecast_spend": 1598000,
+    "owner": "Cloud Platform Finance Partner"
+  },
+  {
+    "cost_center": "CC-AI-101",
+    "department": "AI Governance",
+    "fiscal_year": 2026,
+    "allocated": 860000,
+    "spent": 512000,
+    "pending_approvals": 97000,
+    "forecast_spend": 925000,
+    "owner": "AI Governance Director"
+  },
+  {
+    "cost_center": "CC-PROC-111",
+    "department": "Procurement",
+    "fiscal_year": 2026,
+    "allocated": 430000,
+    "spent": 294000,
+    "pending_approvals": 74000,
+    "forecast_spend": 471000,
+    "owner": "Procurement Operations Manager"
+  },
+  {
+    "cost_center": "CC-DATA-222",
+    "department": "Data Engineering",
+    "fiscal_year": 2026,
+    "allocated": 990000,
+    "spent": 720000,
+    "pending_approvals": 125000,
+    "forecast_spend": 1084000,
+    "owner": "Head of Data Platforms"
+  },
+  {
+    "cost_center": "CC-NET-333",
+    "department": "Network Engineering",
+    "fiscal_year": 2026,
+    "allocated": 610000,
+    "spent": 488000,
+    "pending_approvals": 81000,
+    "forecast_spend": 672000,
+    "owner": "Network Infrastructure Lead"
+  },
+  {
+    "cost_center": "CC-SALES-444",
+    "department": "Enterprise Sales",
+    "fiscal_year": 2026,
+    "allocated": 780000,
+    "spent": 566000,
+    "pending_approvals": 69000,
+    "forecast_spend": 802000,
+    "owner": "Enterprise Sales Controller"
+  },
+  {
+    "cost_center": "CC-RISK-555",
+    "department": "Risk Management",
+    "fiscal_year": 2026,
+    "allocated": 390000,
+    "spent": 275000,
+    "pending_approvals": 44000,
+    "forecast_spend": 421000,
+    "owner": "Risk Governance Lead"
+  },
+  {
+    "cost_center": "CC-COMP-666",
+    "department": "Compliance",
+    "fiscal_year": 2026,
+    "allocated": 520000,
+    "spent": 361000,
+    "pending_approvals": 87000,
+    "forecast_spend": 590000,
+    "owner": "Compliance Operations Manager"
+  },
+  {
+    "cost_center": "CC-AUTO-777",
+    "department": "Automation Engineering",
+    "fiscal_year": 2026,
+    "allocated": 730000,
+    "spent": 504000,
+    "pending_approvals": 96000,
+    "forecast_spend": 798000,
+    "owner": "Automation Program Director"
+  },
+  {
+    "cost_center": "CC-CYBER-888",
+    "department": "Cyber Security",
+    "fiscal_year": 2026,
+    "allocated": 1180000,
+    "spent": 874000,
+    "pending_approvals": 163000,
+    "forecast_spend": 1275000,
+    "owner": "Cyber Security Finance Lead"
+  },
+  {
+    "cost_center": "CC-LEGAL-999",
+    "department": "Legal and Governance",
+    "fiscal_year": 2026,
+    "allocated": 310000,
+    "spent": 198000,
+    "pending_approvals": 28000,
+    "forecast_spend": 299000,
+    "owner": "Corporate Legal Controller"
   }
 ]

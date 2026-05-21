@@ -43,5 +43,141 @@
     "decision_date": "2026-04-03",
     "confidence": 0.57,
     "notes": "Escalated for sanctions screening and access risk."
+  },
+  
+  {
+    "request_id": "PR-2026-021",
+    "vendor_id": "VND-5005",
+    "amount": 142000,
+    "decision": "needs_review",
+    "decision_date": "2026-04-07",
+    "confidence": 0.52,
+    "notes": "High-value procurement flagged due to abnormal pricing variance."
+  },
+  {
+    "request_id": "PR-2026-022",
+    "vendor_id": "VND-6006",
+    "amount": 25000,
+    "decision": "approved",
+    "decision_date": "2026-04-08",
+    "confidence": 0.93,
+    "notes": "Low-risk office hardware purchase approved automatically."
+  },
+  {
+    "request_id": "PR-2026-023",
+    "vendor_id": "VND-7007",
+    "amount": 310000,
+    "decision": "rejected",
+    "decision_date": "2026-04-09",
+    "confidence": 0.88,
+    "notes": "Rejected due to repeated compliance violations and delayed shipments."
+  },
+  {
+    "request_id": "PR-2026-024",
+    "vendor_id": "VND-8008",
+    "amount": 78000,
+    "decision": "approved",
+    "decision_date": "2026-04-11",
+    "confidence": 0.86,
+    "notes": "Consulting services approved within operational budget."
+  },
+  {
+    "request_id": "PR-2026-025",
+    "vendor_id": "VND-9009",
+    "amount": 192000,
+    "decision": "needs_review",
+    "decision_date": "2026-04-12",
+    "confidence": 0.49,
+    "notes": "Potential vendor trust drift detected during approval workflow."
+  },
+  {
+    "request_id": "PR-2026-026",
+    "vendor_id": "VND-1010",
+    "amount": 12000,
+    "decision": "approved",
+    "decision_date": "2026-04-13",
+    "confidence": 0.97,
+    "notes": "Routine networking equipment renewal."
+  },
+  {
+    "request_id": "PR-2026-027",
+    "vendor_id": "VND-1111",
+    "amount": 98000,
+    "decision": "rejected",
+    "decision_date": "2026-04-14",
+    "confidence": 0.83,
+    "notes": "Rejected after financial anomaly analysis detected invoice mismatch."
+  },
+  {
+    "request_id": "PR-2026-028",
+    "vendor_id": "VND-1212",
+    "amount": 64000,
+    "decision": "approved",
+    "decision_date": "2026-04-15",
+    "confidence": 0.9,
+    "notes": "Approved after successful compliance verification."
+  },
+  {
+    "request_id": "PR-2026-029",
+    "vendor_id": "VND-1313",
+    "amount": 420000,
+    "decision": "needs_review",
+    "decision_date": "2026-04-16",
+    "confidence": 0.44,
+    "notes": "Escalated due to possible sanctions exposure and missing audit records."
+  },
+  {
+    "request_id": "PR-2026-030",
+    "vendor_id": "VND-1414",
+    "amount": 53000,
+    "decision": "approved",
+    "decision_date": "2026-04-17",
+    "confidence": 0.92,
+    "notes": "Approved under emergency procurement threshold."
+  },
+  {
+    "request_id": "PR-2026-031",
+    "vendor_id": "VND-1515",
+    "amount": 88000,
+    "decision": "rejected",
+    "decision_date": "2026-04-18",
+    "confidence": 0.79,
+    "notes": "Rejected due to unresolved vendor litigation history."
+  },
+  {
+    "request_id": "PR-2026-032",
+    "vendor_id": "VND-1616",
+    "amount": 134000,
+    "decision": "needs_review",
+    "decision_date": "2026-04-19",
+    "confidence": 0.55,
+    "notes": "Escalated after governance engine detected confidence divergence."
+  },
+  {
+    "request_id": "PR-2026-033",
+    "vendor_id": "VND-1717",
+    "amount": 45000,
+    "decision": "approved",
+    "decision_date": "2026-04-20",
+    "confidence": 0.94,
+    "notes": "Approved after automated vendor reputation analysis."
+  },
+  {
+    "request_id": "PR-2026-034",
+    "vendor_id": "VND-1818",
+    "amount": 205000,
+    "decision": "rejected",
+    "decision_date": "2026-04-21",
+    "confidence": 0.82,
+    "notes": "Rejected due to budget overrun and unstable procurement history."
+  },
+  {
+    "request_id": "PR-2026-035",
+    "vendor_id": "VND-1919",
+    "amount": 61000,
+    "decision": "approved",
+    "decision_date": "2026-04-22",
+    "confidence": 0.91,
+    "notes": "Approved after secondary fraud validation checks."
   }
 ]
