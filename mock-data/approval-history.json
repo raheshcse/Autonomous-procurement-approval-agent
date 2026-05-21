@@ -1,0 +1,47 @@
+[
+  {
+    "request_id": "PR-2025-041",
+    "vendor_id": "VND-1001",
+    "amount": 79000,
+    "decision": "approved",
+    "decision_date": "2025-09-12",
+    "confidence": 0.89,
+    "notes": "Renewal approved with standard cloud controls."
+  },
+  {
+    "request_id": "PR-2025-066",
+    "vendor_id": "VND-2002",
+    "amount": 180000,
+    "decision": "rejected",
+    "decision_date": "2025-11-22",
+    "confidence": 0.78,
+    "notes": "Rejected after delivery risk review."
+  },
+  {
+    "request_id": "PR-2026-010",
+    "vendor_id": "VND-2002",
+    "amount": 95000,
+    "decision": "rejected",
+    "decision_date": "2026-02-05",
+    "confidence": 0.81,
+    "notes": "Rejected due to unresolved pricing dispute."
+  },
+  {
+    "request_id": "PR-2026-014",
+    "vendor_id": "VND-3003",
+    "amount": 38000,
+    "decision": "approved",
+    "decision_date": "2026-03-13",
+    "confidence": 0.91,
+    "notes": "Approved under consulting services threshold."
+  },
+  {
+    "request_id": "PR-2026-019",
+    "vendor_id": "VND-4004",
+    "amount": 110000,
+    "decision": "needs_review",
+    "decision_date": "2026-04-03",
+    "confidence": 0.57,
+    "notes": "Escalated for sanctions screening and access risk."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "cost_center": "CC-IT-410",
+    "department": "IT Operations",
+    "fiscal_year": 2026,
+    "allocated": 750000,
+    "spent": 418000,
+    "pending_approvals": 76000,
+    "forecast_spend": 695000,
+    "owner": "IT Finance Partner"
+  },
+  {
+    "cost_center": "CC-MFG-220",
+    "department": "Manufacturing",
+    "fiscal_year": 2026,
+    "allocated": 900000,
+    "spent": 650000,
+    "pending_approvals": 98000,
+    "forecast_spend": 835000,
+    "owner": "Manufacturing Controller"
+  },
+  {
+    "cost_center": "CC-FIN-120",
+    "department": "Finance Transformation",
+    "fiscal_year": 2026,
+    "allocated": 320000,
+    "spent": 128000,
+    "pending_approvals": 24000,
+    "forecast_spend": 280000,
+    "owner": "Finance Transformation Lead"
+  },
+  {
+    "cost_center": "CC-SEC-330",
+    "department": "Security",
+    "fiscal_year": 2026,
+    "allocated": 500000,
+    "spent": 312000,
+    "pending_approvals": 88000,
+    "forecast_spend": 548000,
+    "owner": "Security Finance Partner"
+  }
+]

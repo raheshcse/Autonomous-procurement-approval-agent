@@ -1,0 +1,63 @@
+[
+  {
+    "vendor_id": "VND-1001",
+    "name": "Northstar Cloud Services",
+    "country": "United States",
+    "risk_score": 0.24,
+    "financial_health": "strong",
+    "data_access_level": "moderate",
+    "sanctions_watchlist": false,
+    "certifications": ["ISO 27001", "SOC 2 Type II"],
+    "incidents": []
+  },
+  {
+    "vendor_id": "VND-2002",
+    "name": "Apex Industrial Components",
+    "country": "Singapore",
+    "risk_score": 0.58,
+    "financial_health": "stable",
+    "data_access_level": "low",
+    "sanctions_watchlist": false,
+    "certifications": ["ISO 9001"],
+    "incidents": [
+      {
+        "date": "2025-12-08",
+        "type": "late_delivery",
+        "severity": "medium"
+      },
+      {
+        "date": "2026-03-17",
+        "type": "pricing_dispute",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "vendor_id": "VND-3003",
+    "name": "ClearLedger Advisory",
+    "country": "New Zealand",
+    "risk_score": 0.18,
+    "financial_health": "strong",
+    "data_access_level": "high",
+    "sanctions_watchlist": false,
+    "certifications": ["SOC 2 Type II"],
+    "incidents": []
+  },
+  {
+    "vendor_id": "VND-4004",
+    "name": "Greyline Access Systems",
+    "country": "United Kingdom",
+    "risk_score": 0.67,
+    "financial_health": "watch",
+    "data_access_level": "critical",
+    "sanctions_watchlist": true,
+    "certifications": [],
+    "incidents": [
+      {
+        "date": "2026-01-11",
+        "type": "security_questionnaire_failure",
+        "severity": "high"
+      }
+    ]
+  }
+]

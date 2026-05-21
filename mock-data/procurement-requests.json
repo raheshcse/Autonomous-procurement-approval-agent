@@ -1,0 +1,58 @@
+[
+  {
+    "request_id": "PR-2026-001",
+    "requester": "Ava Chen",
+    "department": "IT Operations",
+    "cost_center": "CC-IT-410",
+    "vendor_id": "VND-1001",
+    "category": "Cloud infrastructure",
+    "description": "Annual managed Kubernetes platform support renewal",
+    "amount": 84500,
+    "currency": "USD",
+    "urgency": "normal",
+    "business_justification": "Required to maintain production platform support coverage.",
+    "submitted_at": "2026-05-15T09:30:00Z"
+  },
+  {
+    "request_id": "PR-2026-002",
+    "requester": "Marcus Rivera",
+    "department": "Manufacturing",
+    "cost_center": "CC-MFG-220",
+    "vendor_id": "VND-2002",
+    "category": "Industrial sensors",
+    "description": "Emergency purchase of predictive maintenance sensors",
+    "amount": 275000,
+    "currency": "USD",
+    "urgency": "critical",
+    "business_justification": "Needed to prevent downtime in the Auckland assembly line.",
+    "submitted_at": "2026-05-18T14:10:00Z"
+  },
+  {
+    "request_id": "PR-2026-003",
+    "requester": "Priya Nair",
+    "department": "Finance Transformation",
+    "cost_center": "CC-FIN-120",
+    "vendor_id": "VND-3003",
+    "category": "Consulting services",
+    "description": "Quarterly finance automation advisory package",
+    "amount": 42000,
+    "currency": "USD",
+    "urgency": "low",
+    "business_justification": "Supports controls automation roadmap and internal audit readiness.",
+    "submitted_at": "2026-05-19T11:45:00Z"
+  },
+  {
+    "request_id": "PR-2026-004",
+    "requester": "Noah Patel",
+    "department": "Security",
+    "cost_center": "CC-SEC-330",
+    "vendor_id": "VND-4004",
+    "category": "Security tooling",
+    "description": "Privileged access management expansion",
+    "amount": 132000,
+    "currency": "USD",
+    "urgency": "normal",
+    "business_justification": "Expands privileged controls to newly acquired subsidiaries.",
+    "submitted_at": "2026-05-20T08:20:00Z"
+  }
+]
