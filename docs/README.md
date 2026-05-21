@@ -1,27 +1,169 @@
 # Autonomous Procurement Approval Agent
 
-Initial LangGraph-based enterprise AI workflow for X-VERBA governance testing.
+Enterprise AI multi-agent governance testing system built using:
 
-## Install
+* FastAPI
+* LangGraph
+* TypedDict
+* JSON enterprise mock data
+* Audit logging
+* Governance drift simulation
+* X-VERBA-style observability patterns
+
+This project simulates an autonomous procurement approval workflow where multiple AI agents collaborate to evaluate vendor risk, validate budgets, make approval decisions, escalate governance concerns, and generate audit traces.
+
+---
+
+# Architecture
+
+```text
+                         ┌──────────────────────┐
+                         │ Procurement Request  │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                    ┌──────────────────────────┐
+                    │   VendorRiskAgent        │
+                    │ - vendor risk scoring    │
+                    │ - sanctions validation   │
+                    │ - compliance checks      │
+                    └──────────┬───────────────┘
+                               │
+                               ▼
+                    ┌──────────────────────────┐
+                    │ BudgetValidationAgent    │
+                    │ - budget availability    │
+                    │ - forecast utilization   │
+                    │ - budget drift analysis  │
+                    └──────────┬───────────────┘
+                               │
+                               ▼
+                    ┌──────────────────────────┐
+                    │ ApprovalDecisionAgent    │
+                    │ - dynamic thresholds     │
+                    │ - approval confidence    │
+                    │ - autonomous decisions   │
+                    └──────────┬───────────────┘
+                               │
+                               ▼
+                    ┌──────────────────────────┐
+                    │ EscalationAgent          │
+                    │ - governance escalation  │
+                    │ - committee routing      │
+                    │ - drift detection        │
+                    └──────────┬───────────────┘
+                               │
+                               ▼
+                    ┌──────────────────────────┐
+                    │ AuditLoggerAgent         │
+                    │ - audit events           │
+                    │ - governance warnings    │
+                    │ - workflow trace         │
+                    └──────────┬───────────────┘
+                               │
+                               ▼
+                      ┌──────────────────┐
+                      │ JSON API Output  │
+                      └──────────────────┘
+```
+
+---
+
+# A2A Workflow Design
+
+This project demonstrates sequential Agent-to-Agent (A2A) orchestration using LangGraph.
+
+Each agent:
+
+* receives shared workflow state
+* mutates state
+* contributes confidence scores
+* generates governance observations
+* passes decisions to downstream agents
+
+The workflow intentionally introduces governance instability patterns for X-VERBA testing.
+
+---
+
+# Governance Drift Simulation
+
+The implementation intentionally includes governance-risk behaviors to simulate real enterprise AI governance failures.
+
+## Simulated Drift Classes
+
+| Drift Class | Description                                        |
+| ----------- | -------------------------------------------------- |
+| DC-I1       | Confidence divergence between agents               |
+| DC-I2       | Silent degradation from incomplete/risky decisions |
+| DC-S2       | Unstable approval thresholds under urgency         |
+| DC-S4       | Escalation and workflow divergence                 |
+| DC-T1       | Autonomous tool-style approval drift               |
+
+---
+
+# Project Structure
+
+```text
+autonomous-procurement-approval-agent/
+│
+├── ai-agents/
+│   ├── main.py
+│   ├── workflow.py
+│   ├── agents.py
+│   ├── state.py
+│   ├── logger.py
+│   └── config.py
+│
+├── mock-data/
+│   ├── procurement-requests.json
+│   ├── vendors.json
+│   ├── budget-data.json
+│   └── approval-history.json
+│
+├── logs/
+├── docs/
+└── tests/
+```
+
+---
+
+# Install
 
 ```powershell
 cd c:\Rahesh\X-VERBA\autonomous-procurement-approval-agent
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-## Run
+---
+
+# Run
 
 ```powershell
 cd ai-agents
 uvicorn main:app --reload
 ```
 
-## Endpoints
+---
 
-- `GET /health`
-- `POST /run-procurement-workflow`
+# Swagger UI
 
-Example body:
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+# API Endpoints
+
+| Method | Endpoint                    |
+| ------ | --------------------------- |
+| GET    | `/`                         |
+| GET    | `/health`                   |
+| POST   | `/run-procurement-workflow` |
+
+---
+
+# Example Request
 
 ```json
 {
@@ -29,22 +171,9 @@ Example body:
 }
 ```
 
-Swagger UI:
+---
 
-```text
-http://127.0.0.1:8000/docs
-```
-
-## Test
-
-```powershell
-cd c:\Rahesh\X-VERBA\autonomous-procurement-approval-agent
-.\venv\Scripts\python.exe -m unittest discover -s tests
-```
-
-## Sample Response
-
-The exact `workflow_id` and timestamps change on each run.
+# Example Response
 
 ```json
 {
@@ -72,30 +201,58 @@ The exact `workflow_id` and timestamps change on each run.
   "governance_warnings": [
     "Risky vendor approval pressure detected.",
     "Budget drift: projected utilization exceeds auto-approval limit.",
-    "DC-I2 silent degradation risk: request exceeds available budget.",
-    "DC-S2 unstable thresholds: urgency lowered approval threshold."
-  ],
-  "confidence_scores": {
-    "VendorRiskAgent": 0.88,
-    "BudgetValidationAgent": 0.92,
-    "ApprovalDecisionAgent": 0.3,
-    "EscalationAgent": 0.88
-  },
-  "audit_trail": []
+    "DC-I2 silent degradation risk detected.",
+    "DC-S2 unstable threshold behavior detected."
+  ]
 }
 ```
 
-The real response includes five audit events, one from each agent. The short
-sample above keeps the shape readable; use Swagger UI to inspect the full trace.
+---
 
-## Governance Drift Concepts
+# Audit Logging
 
-- `DC-I1 confidence divergence`: agent confidence scores disagree materially.
-- `DC-I2 silent degradation`: missing or degraded data could produce quiet failures.
-- `DC-S2 unstable thresholds`: dynamic approval thresholds shift under urgency or history.
-- `DC-S4 loop divergence`: workflow traces grow beyond the expected path.
-- `DC-T1 tool autonomy drift`: external-risk style signals, such as sanctions flags, demand human oversight.
+Audit traces are written to:
 
-## Notes
+```text
+logs/audit-log.jsonl
+```
 
-The implementation intentionally includes clearly commented governance-risk behaviors, such as urgency lowering an approval threshold, so X-VERBA tests can verify detection and audit trace quality.
+Each workflow execution records:
+
+* timestamps
+* agent decisions
+* governance warnings
+* escalation traces
+* confidence scores
+* workflow transitions
+
+---
+
+# Testing
+
+```powershell
+cd c:\Rahesh\X-VERBA\autonomous-procurement-approval-agent
+.\venv\Scripts\python.exe -m unittest discover -s tests
+```
+
+---
+
+# Purpose
+
+This project was built to explore:
+
+* AI governance testing
+* enterprise multi-agent orchestration
+* LangGraph workflow design
+* governance drift simulation
+* observability and auditability
+* X-VERBA-style risk analysis patterns
+
+The system intentionally balances:
+
+* autonomous decision-making
+* governance instability
+* audit transparency
+* escalation controls
+
+to simulate real-world enterprise AI risks.
