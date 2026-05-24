@@ -1,14 +1,14 @@
 # Autonomous Procurement Approval Agent
 
-Enterprise AI multi-agent governance testing system built using:
+Enterprise AI multi-agent procurement governance system built using:
 
 * FastAPI
 * LangGraph
 * TypedDict
 * JSON enterprise mock data
 * Audit logging
-* Governance drift simulation
-* X-VERBA-style observability patterns
+* Workflow orchestration
+* Governance monitoring
 
 This project simulates an autonomous procurement approval workflow where multiple AI agents collaborate to evaluate vendor risk, validate budgets, make approval decisions, escalate governance concerns, and generate audit traces.
 
@@ -34,23 +34,23 @@ This project simulates an autonomous procurement approval workflow where multipl
                     │ BudgetValidationAgent    │
                     │ - budget availability    │
                     │ - forecast utilization   │
-                    │ - budget drift analysis  │
+                    │ - spending analysis      │
                     └──────────┬───────────────┘
                                │
                                ▼
                     ┌──────────────────────────┐
                     │ ApprovalDecisionAgent    │
-                    │ - dynamic thresholds     │
                     │ - approval confidence    │
-                    │ - autonomous decisions   │
+                    │ - dynamic decisions      │
+                    │ - workflow validation    │
                     └──────────┬───────────────┘
                                │
                                ▼
                     ┌──────────────────────────┐
                     │ EscalationAgent          │
-                    │ - governance escalation  │
-                    │ - committee routing      │
-                    │ - drift detection        │
+                    │ - escalation routing     │
+                    │ - governance review      │
+                    │ - operational handling   │
                     └──────────┬───────────────┘
                                │
                                ▼
@@ -76,28 +76,36 @@ This project demonstrates sequential Agent-to-Agent (A2A) orchestration using La
 Each agent:
 
 * receives shared workflow state
-* mutates state
+* mutates workflow state
 * contributes confidence scores
 * generates governance observations
 * passes decisions to downstream agents
 
-The workflow intentionally introduces governance instability patterns for X-VERBA testing.
+The workflow simulates enterprise procurement approval coordination across multiple AI-assisted services.
 
 ---
 
-# Governance Drift Simulation
+# Governance Monitoring
 
-The implementation intentionally includes governance-risk behaviors to simulate real enterprise AI governance failures.
+The platform simulates enterprise procurement governance scenarios including:
 
-## Simulated Drift Classes
+* vendor approval conflicts
+* high-risk supplier detection
+* budget over-utilization
+* approval confidence inconsistencies
+* escalation routing
+* operational anomaly detection
+* audit trace generation
 
-| Drift Class | Description                                        |
-| ----------- | -------------------------------------------------- |
-| DC-I1       | Confidence divergence between agents               |
-| DC-I2       | Silent degradation from incomplete/risky decisions |
-| DC-S2       | Unstable approval thresholds under urgency         |
-| DC-S4       | Escalation and workflow divergence                 |
-| DC-T1       | Autonomous tool-style approval drift               |
+The workflow helps demonstrate how enterprise AI systems can maintain:
+
+* operational transparency
+* auditability
+* approval accountability
+* escalation control
+* workflow observability
+
+within autonomous procurement pipelines.
 
 ---
 
@@ -130,7 +138,7 @@ autonomous-procurement-approval-agent/
 # Install
 
 ```powershell
-cd c:\Rahesh\X-VERBA\autonomous-procurement-approval-agent
+cd c:\Rahesh\autonomous-procurement-approval-agent
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
@@ -191,7 +199,6 @@ http://127.0.0.1:8000/docs
   },
   "approval_decision": {
     "decision": "rejected",
-    "dynamic_threshold": 0.88,
     "approval_confidence": 0.3
   },
   "escalation_status": {
@@ -200,9 +207,9 @@ http://127.0.0.1:8000/docs
   },
   "governance_warnings": [
     "Risky vendor approval pressure detected.",
-    "Budget drift: projected utilization exceeds auto-approval limit.",
-    "DC-I2 silent degradation risk detected.",
-    "DC-S2 unstable threshold behavior detected."
+    "Budget utilization exceeded approval threshold.",
+    "Operational review required.",
+    "Escalation triggered for governance review."
   ]
 }
 ```
@@ -231,7 +238,7 @@ Each workflow execution records:
 # Testing
 
 ```powershell
-cd c:\Rahesh\X-VERBA\autonomous-procurement-approval-agent
+cd c:\Rahesh\autonomous-procurement-approval-agent
 .\venv\Scripts\python.exe -m unittest discover -s tests
 ```
 
@@ -241,18 +248,20 @@ cd c:\Rahesh\X-VERBA\autonomous-procurement-approval-agent
 
 This project was built to explore:
 
-* AI governance testing
-* enterprise multi-agent orchestration
-* LangGraph workflow design
-* governance drift simulation
-* observability and auditability
-* X-VERBA-style risk analysis patterns
+* enterprise AI workflow orchestration
+* autonomous procurement decision systems
+* LangGraph multi-agent coordination
+* governance monitoring
+* operational risk analysis
+* audit logging and observability
+* enterprise escalation workflows
 
-The system intentionally balances:
+The system combines:
 
 * autonomous decision-making
-* governance instability
+* workflow validation
+* governance oversight
+* confidence scoring
 * audit transparency
-* escalation controls
 
-to simulate real-world enterprise AI risks.
+to simulate real-world enterprise procurement operations.
