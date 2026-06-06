@@ -1,20 +1,95 @@
 # Autonomous Procurement Approval Agent
 
-Enterprise AI multi-agent procurement governance system built using:
+![Python](https://img.shields.io/badge/Python-3.11+-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![LangGraph](https://img.shields.io/badge/LangGraph-Multi--Agent-orange)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB)
+![License](https://img.shields.io/badge/License-MIT-brightgreen)
 
-* FastAPI
-* LangGraph
-* TypedDict
-* JSON enterprise mock data
-* Audit logging
-* Workflow orchestration
-* Governance monitoring
+## Overview
 
-This project simulates an autonomous procurement approval workflow where multiple AI agents collaborate to evaluate vendor risk, validate budgets, make approval decisions, escalate governance concerns, and generate audit traces.
+The Autonomous Procurement Approval Agent is a full-stack AI-powered procurement governance platform designed to simulate enterprise procurement approval workflows using multi-agent orchestration.
+
+The system combines a React-based dashboard, FastAPI backend services, and LangGraph workflow orchestration to coordinate specialized AI agents responsible for vendor risk analysis, budget validation, approval decisions, escalation handling, and audit logging.
+
+This project demonstrates how autonomous workflow agents can collaborate to automate procurement processes while maintaining governance, transparency, auditability, and operational oversight.
 
 ---
 
-# Architecture
+# Key Features
+
+### Multi-Agent Workflow Orchestration
+
+* Vendor Risk Analysis
+* Budget Validation
+* Approval Decision Making
+* Escalation Handling
+* Audit Logging
+* Governance Monitoring
+
+### Enterprise Governance Simulation
+
+* Vendor risk scoring
+* Budget utilization validation
+* Procurement approval workflows
+* Escalation routing
+* Governance warning generation
+* Audit trail creation
+
+### Full-Stack Platform
+
+* React Dashboard
+* FastAPI REST APIs
+* LangGraph Workflow Engine
+* Interactive Workflow Runner
+* Procurement Operations Dashboard
+* API-driven Architecture
+
+### Observability & Auditability
+
+* Workflow trace generation
+* Agent decision tracking
+* Confidence scoring
+* Governance warnings
+* Audit log persistence
+
+---
+
+# System Architecture
+
+## Full-Stack Architecture
+
+```text
+┌─────────────────────────────┐
+│     React Dashboard UI      │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│       FastAPI Backend       │
+│      REST API Layer         │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│    LangGraph Orchestrator   │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│ Multi-Agent Procurement     │
+│ Approval Workflow           │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│     Dashboard Response      │
+└─────────────────────────────┘
+```
+
+---
+
+## Backend Agent Workflow Architecture
 
 ```text
                          ┌──────────────────────┐
@@ -25,23 +100,23 @@ This project simulates an autonomous procurement approval workflow where multipl
                     ┌──────────────────────────┐
                     │   VendorRiskAgent        │
                     │ - vendor risk scoring    │
-                    │ - sanctions validation   │
-                    │ - compliance checks      │
+                    │ - compliance validation  │
+                    │ - supplier evaluation    │
                     └──────────┬───────────────┘
                                │
                                ▼
                     ┌──────────────────────────┐
                     │ BudgetValidationAgent    │
                     │ - budget availability    │
-                    │ - forecast utilization   │
-                    │ - spending analysis      │
+                    │ - utilization analysis   │
+                    │ - spending validation    │
                     └──────────┬───────────────┘
                                │
                                ▼
                     ┌──────────────────────────┐
                     │ ApprovalDecisionAgent    │
                     │ - approval confidence    │
-                    │ - dynamic decisions      │
+                    │ - decision generation    │
                     │ - workflow validation    │
                     └──────────┬───────────────┘
                                │
@@ -50,15 +125,15 @@ This project simulates an autonomous procurement approval workflow where multipl
                     │ EscalationAgent          │
                     │ - escalation routing     │
                     │ - governance review      │
-                    │ - operational handling   │
+                    │ - exception handling     │
                     └──────────┬───────────────┘
                                │
                                ▼
                     ┌──────────────────────────┐
                     │ AuditLoggerAgent         │
                     │ - audit events           │
-                    │ - governance warnings    │
                     │ - workflow trace         │
+                    │ - warning generation     │
                     └──────────┬───────────────┘
                                │
                                ▼
@@ -69,43 +144,189 @@ This project simulates an autonomous procurement approval workflow where multipl
 
 ---
 
-# A2A Workflow Design
+# Agent Responsibilities
 
-This project demonstrates sequential Agent-to-Agent (A2A) orchestration using LangGraph.
+## Vendor Risk Agent
 
-Each agent:
+Evaluates suppliers and vendors before procurement approval.
 
-* receives shared workflow state
-* mutates workflow state
-* contributes confidence scores
-* generates governance observations
-* passes decisions to downstream agents
+Responsibilities:
 
-The workflow simulates enterprise procurement approval coordination across multiple AI-assisted services.
+* Vendor risk scoring
+* Compliance validation
+* Supplier assessment
+* Risk categorization
+
+Outputs:
+
+* Risk Score
+* Risk Level
+* Vendor Assessment
 
 ---
 
-# Governance Monitoring
+## Budget Validation Agent
 
-The platform simulates enterprise procurement governance scenarios including:
+Validates procurement requests against organizational budgets.
 
-* vendor approval conflicts
-* high-risk supplier detection
-* budget over-utilization
-* approval confidence inconsistencies
-* escalation routing
-* operational anomaly detection
-* audit trace generation
+Responsibilities:
 
-The workflow helps demonstrate how enterprise AI systems can maintain:
+* Budget availability checks
+* Spending analysis
+* Utilization forecasting
+* Cost center validation
 
-* operational transparency
-* auditability
-* approval accountability
-* escalation control
-* workflow observability
+Outputs:
 
-within autonomous procurement pipelines.
+* Budget Availability
+* Projected Utilization
+* Validation Status
+
+---
+
+## Approval Decision Agent
+
+Makes procurement decisions using previous agent outputs.
+
+Responsibilities:
+
+* Decision evaluation
+* Approval confidence calculation
+* Workflow validation
+* Procurement recommendation
+
+Outputs:
+
+* Approved
+* Rejected
+* Escalated
+* Confidence Score
+
+---
+
+## Escalation Agent
+
+Handles high-risk procurement scenarios.
+
+Responsibilities:
+
+* Governance review routing
+* Escalation management
+* Operational oversight
+* Exception handling
+
+Outputs:
+
+* Escalation Status
+* Assigned Review Team
+
+---
+
+## Audit Logger Agent
+
+Maintains operational traceability.
+
+Responsibilities:
+
+* Audit event logging
+* Workflow trace generation
+* Governance warning creation
+* Execution history recording
+
+Outputs:
+
+* Audit Logs
+* Workflow History
+* Governance Warnings
+
+---
+
+# Frontend Dashboard
+
+The React dashboard provides an enterprise-style interface for interacting with procurement workflows.
+
+Modules include:
+
+### Dashboard
+
+* Procurement overview
+* Workflow metrics
+* Governance indicators
+
+### Workflow Runner
+
+* Execute procurement workflows
+* Submit procurement request IDs
+* View workflow results
+
+### Procurement Requests
+
+* Request management
+* Procurement visibility
+* Request tracking
+
+### Vendor Analysis
+
+* Vendor risk monitoring
+* Risk assessments
+* Supplier insights
+
+### Budget Review
+
+* Budget utilization monitoring
+* Cost center visibility
+* Financial validation
+
+### Audit Logs
+
+* Governance warnings
+* Workflow execution history
+* Audit trail review
+
+### System Health
+
+* Backend connectivity
+* Workflow availability
+* Service monitoring
+
+---
+
+# Technology Stack
+
+## Frontend
+
+* React
+* Vite
+* JavaScript
+* CSS
+* Axios
+
+## Backend
+
+* Python
+* FastAPI
+* Uvicorn
+
+## AI Workflow Layer
+
+* LangGraph
+* Multi-Agent Orchestration
+* Workflow State Management
+
+## Data Layer
+
+* JSON Mock Datasets
+
+## Documentation & Testing
+
+* Swagger/OpenAPI
+* Unit Testing
+
+## DevOps & Version Control
+
+* Git
+* GitHub
+* Virtual Environments
 
 ---
 
@@ -113,6 +334,11 @@ within autonomous procurement pipelines.
 
 ```text
 autonomous-procurement-approval-agent/
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
 │
 ├── ai-agents/
 │   ├── main.py
@@ -129,31 +355,57 @@ autonomous-procurement-approval-agent/
 │   └── approval-history.json
 │
 ├── logs/
-├── docs/
-└── tests/
+├── tests/
+└── README.md
 ```
 
 ---
 
-# Install
+# Installation
 
-```powershell
-cd c:\Rahesh\autonomous-procurement-approval-agent
-.\venv\Scripts\python.exe -m pip install -r requirements.txt
+## Clone Repository
+
+```bash
+git clone https://github.com/raheshcse/Autonomous-procurement-approval-agent.git
+cd Autonomous-procurement-approval-agent
 ```
 
 ---
 
-# Run
+## Backend Setup
 
-```powershell
+```bash
+python -m venv venv
+```
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run Backend
+
+```bash
 cd ai-agents
 uvicorn main:app --reload
 ```
 
----
+Backend URL:
 
-# Swagger UI
+```text
+http://127.0.0.1:8000
+```
+
+Swagger Documentation:
 
 ```text
 http://127.0.0.1:8000/docs
@@ -161,17 +413,38 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# API Endpoints
+## Frontend Setup
 
-| Method | Endpoint                    |
-| ------ | --------------------------- |
-| GET    | `/`                         |
-| GET    | `/health`                   |
-| POST   | `/run-procurement-workflow` |
+```bash
+cd frontend
+npm install
+```
+
+Run Frontend:
+
+```bash
+npm run dev
+```
+
+Frontend URL:
+
+```text
+http://localhost:5173
+```
 
 ---
 
-# Example Request
+# API Endpoint
+
+## Execute Procurement Workflow
+
+### Request
+
+```http
+POST /run-procurement-workflow
+```
+
+### Example Request
 
 ```json
 {
@@ -181,19 +454,17 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# Example Response
+# Example Workflow Response
 
 ```json
 {
-  "workflow_id": "wf-0b98c5bb-3a52-42f2-9c9a-37d15ef0b30a",
+  "workflow_id": "wf-12345",
   "request_id": "PR-2026-002",
   "vendor_risk": {
-    "vendor_id": "VND-2002",
     "risk_score": 0.7,
     "risk_level": "high"
   },
   "budget_validation": {
-    "cost_center": "CC-MFG-220",
     "budget_available": false,
     "projected_utilization": 1.137
   },
@@ -202,15 +473,8 @@ http://127.0.0.1:8000/docs
     "approval_confidence": 0.3
   },
   "escalation_status": {
-    "result": "escalated",
-    "assigned_to": "Vendor Risk Committee"
-  },
-  "governance_warnings": [
-    "Risky vendor approval pressure detected.",
-    "Budget utilization exceeded approval threshold.",
-    "Operational review required.",
-    "Escalation triggered for governance review."
-  ]
+    "result": "escalated"
+  }
 }
 ```
 
@@ -218,50 +482,75 @@ http://127.0.0.1:8000/docs
 
 # Audit Logging
 
-Audit traces are written to:
+Workflow execution traces are written to:
 
 ```text
 logs/audit-log.jsonl
 ```
 
-Each workflow execution records:
+Recorded information includes:
 
-* timestamps
-* agent decisions
-* governance warnings
-* escalation traces
-* confidence scores
-* workflow transitions
+* Workflow IDs
+* Agent Decisions
+* Governance Warnings
+* Escalation Events
+* Confidence Scores
+* Execution Timestamps
 
 ---
 
 # Testing
 
-```powershell
-cd c:\Rahesh\autonomous-procurement-approval-agent
-.\venv\Scripts\python.exe -m unittest discover -s tests
+Run unit tests:
+
+```bash
+python -m unittest discover -s tests
 ```
 
 ---
 
-# Purpose
+# Learning Outcomes
 
-This project was built to explore:
+Through this project, I gained practical experience with:
 
-* enterprise AI workflow orchestration
-* autonomous procurement decision systems
-* LangGraph multi-agent coordination
-* governance monitoring
-* operational risk analysis
-* audit logging and observability
-* enterprise escalation workflows
+* FastAPI backend development
+* LangGraph workflow orchestration
+* Multi-agent system design
+* Agent-to-Agent (A2A) communication
+* Workflow state management
+* Enterprise governance concepts
+* Audit logging strategies
+* API development and testing
+* Full-stack application integration
+* AI-assisted software development
 
-The system combines:
+---
 
-* autonomous decision-making
-* workflow validation
-* governance oversight
-* confidence scoring
-* audit transparency
+# Future Enhancements
 
-to simulate real-world enterprise procurement operations.
+* Database integration
+* Authentication & authorization
+* Role-based access control
+* Real-time workflow monitoring
+* Workflow analytics dashboards
+* Advanced risk models
+* Cloud deployment
+* Enterprise reporting
+
+---
+
+# Author
+
+**Rahesh Saravanan**
+
+Software Engineer | AI & Full-Stack Developer | Cyber Security Enthusiast
+
+GitHub:
+https://github.com/raheshcse
+
+LinkedIn:
+https://www.linkedin.com/in/raheshsaravanan/
+
+---
+
+⭐ If you found this project interesting, consider giving it a star.
